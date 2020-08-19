@@ -1,0 +1,26 @@
+html,body{
+    background-color: #909cc4;
+    height: 100%;
+    margin: 10px;
+    padding:0;
+    display: flex;
+    
+}
+
+header button{
+    height: 30px;
+    background-color: #232653;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#leftSide, #rightSide{
+    background-color: #8479a1;
+    margin: 10px;
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+
+    border: 1px solid darkorchid;
+}
