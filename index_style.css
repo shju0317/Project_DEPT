@@ -1,10 +1,14 @@
 html,body{
-    background-color: #909cc4;
     height: 100%;
+    width: 100%;
     margin: 10px;
     padding:0;
     display: flex;
     
+}
+
+header{
+    height: 50px;
 }
 
 header button{
@@ -12,7 +16,10 @@ header button{
     background-color: #232653;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 24px;
+    padding: 1.2rem;
+    text-align: center;
+    margin-left: auto;
 }
 
 #leftSide, #rightSide{
@@ -20,7 +27,7 @@ header button{
     margin: 10px;
     width: 50%;
     height: 100%;
-    display: inline-block;
+    display: flex;
 
     border: 1px solid darkorchid;
 }
