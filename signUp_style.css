@@ -6,7 +6,7 @@ body{
 }
 
 .box{
-    width: 300px;
+    width: 80%;
     padding: 40px;
     position: absolute;
     top: 50%;
@@ -26,14 +26,24 @@ img{
     font-weight: bold;
 }
 
+.box label{
+    display: inline-block;
+    width: 12%;
+    text-align: left;
+    margin: 4px;
+    
+    color: black;
+    font-weight: bold;
+}
+
 .box input[type="text"], .box input[type="password"]{
     background: none;
-    display: block;
+    display: inline-block;
     margin: 20px auto;
     text-align: center;
     border: 2px solid #8479a1;
     padding: 14px 10px;
-    width: 200px;
+    width: 300px;
     outline: none;
     color:#232653;
     border-radius: 24px;
@@ -42,7 +52,7 @@ img{
 }
 
 .box input[type="text"]:focus, .box input[type="password"]:focus{
-    width: 280px;
+    width: 350px;
     border-color: #232653;
 }
 
@@ -61,7 +71,8 @@ img{
     transition: 0.25s;
     cursor: pointer;
     font-size: 15px;
-    width: 180px;
+    width: 350px;
+    margin-top: 30px;
 }
 
 .box input[type="submit"]:hover{
