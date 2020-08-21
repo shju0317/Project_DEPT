@@ -1,33 +1,130 @@
-html,body{
-    height: 100%;
-    width: 100%;
-    margin: 10px;
-    padding:0;
-    display: flex;
-    
+@font-face{
+    font-family: "BinggraeTaom";
+    src: url("font/BinggraeTaom.otf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+body{
+    font-family: BinggraeTaom;
+    margin: 0;
+    padding: 0;
+    background: #909cc4;
 }
 
 header{
-    height: 50px;
+    padding: 15px 30px;
+    text-align: right;
 }
 
 header button{
+    font-family: BinggraeTaom;
     height: 30px;
+    width: 100px;
     background-color: #232653;
     color: white;
-    border: none;
-    border-radius: 24px;
-    padding: 1.2rem;
-    text-align: center;
-    margin-left: auto;
+    border: 2px solid #232653;
+    border-radius: 25px;
+    padding:auto;
+    font-size: 17px;
 }
 
-#leftSide, #rightSide{
-    background-color: #8479a1;
-    margin: 10px;
-    width: 50%;
+header button:hover{
+    background: none;
+    color: #232653;
+}
+
+#div_logo{
+    text-align: center;
+    left: 50%;
+}
+
+#dept_logo{
+    width: 300px;
+}
+
+#contents{
+    width: 100%;
+    height: 550px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.left_side{
+    width: 800px;
+    height: 550px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.right_side{
+    width: 800px;
+    height: 550px;
+    display: inline-block;
+    /* border: 1px solid red; */
+}
+
+.navigation{
+    position: absolute;
+    left: 30%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.bar{
+    width: 50px;
+    height: 10px;
+    border: 1.5px solid #232653;
+    border-radius: 25px;
+    margin: 6px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.bar:hover{
+    background: #232653;
+}
+
+input[name="r"]{
+    position: absolute;
+    visibility: hidden;
+}
+
+.slides{
+    width: 500%;
     height: 100%;
     display: flex;
+}
 
-    border: 1px solid darkorchid;
+.slide{
+    width: 20%;
+    transition: 0.6s;
+}
+
+.slide img{
+    width: 100%;
+    height: 100%;
+}
+
+#r1:checked ~ .s1{
+    margin-left: 0%;
+}
+#r2:checked ~ .s1{
+    margin-left: -20%;
+}
+#r3:checked ~ .s1{
+    margin-left: -40%;
+}
+#r4:checked ~ .s1{
+    margin-left: -60%;
+}
+#r5:checked ~ .s1{
+    margin-left: -80%;
+}
+
+#best_list{
+    width: 780px;
+    height: 530px;
+    margin: 10px;
+    border: 1px solid green;
 }

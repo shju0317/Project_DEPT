@@ -11,15 +11,16 @@
     <form class="box" action="login.html" method="POST">
         
             <img src="images/dept_logo.png" alt="dept_logo" >
-            <h3>signup</h3>
-            <div><label>이메일(아이디)</label><input type="text" name="" placeholder="userID(email)"/></div>
-            <div><label>비밀번호</label><input type="password" name="" placeholder="password"/></div>
-            <div><label>비밀번호 재확인</label><input type="password" name="" placeholder="check your password"/></div>
-            <div><label>학교/학과</label><input type="text" name="" placeholder="학교/학과"/>
-                <button>검색</button>
+            <div id="input_box">
+                <h3>signup</h3>
+                <div><label>이메일(아이디)</label><input type="text" name="" placeholder="userID(email)"/></div>
+                <div><label>비밀번호</label><input type="password" name="" placeholder="password"/></div>
+                <div><label>비밀번호 재확인</label><input type="password" name="" placeholder="check your password"/></div>
+                <div><label>학교/학과</label><input type="text" name="" id="dept_input" placeholder="학교/학과" readonly/>
+                    <button id="dept_search">검색</button>
+                </div>
+                <div><input type="submit" name="" value="Create an Account"/></div>
             </div>
-            <div><input type="submit" name="" value="Create an Account"/></div>
-       
     </form>
 </body>
 </html>
