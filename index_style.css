@@ -9,7 +9,6 @@ body{
     font-family: BinggraeTaom;
     margin: 0;
     padding: 0;
-    background: #909cc4;
 }
 
 header{
@@ -21,9 +20,9 @@ header button{
     font-family: BinggraeTaom;
     height: 30px;
     width: 100px;
-    background-color: #232653;
+    background-color: #4a148c;
     color: white;
-    border: 2px solid #232653;
+    border: 2px solid #4a148c;
     border-radius: 25px;
     padding:auto;
     font-size: 17px;
@@ -31,16 +30,17 @@ header button{
 
 header button:hover{
     background: none;
-    color: #232653;
+    color: #4a148c;
 }
 
 #div_logo{
     text-align: center;
     left: 50%;
+    margin: 50px auto;
 }
 
 #dept_logo{
-    width: 300px;
+    width: 200px;
 }
 
 #contents{
@@ -74,15 +74,15 @@ header button:hover{
 .bar{
     width: 50px;
     height: 10px;
-    border: 1.5px solid #232653;
+    border: 1.5px solid #4a148c;
     border-radius: 25px;
-    margin: 6px;
+    margin: 6px auto;
     cursor: pointer;
     transition: 0.4s;
 }
 
 .bar:hover{
-    background: #232653;
+    background: #4a148c;
 }
 
 input[name="r"]{
@@ -94,6 +94,7 @@ input[name="r"]{
     width: 500%;
     height: 100%;
     display: flex;
+    text-align: center;
 }
 
 .slide{
@@ -125,6 +126,6 @@ input[name="r"]{
 #best_list{
     width: 780px;
     height: 530px;
-    margin: 10px;
-    border: 1px solid green;
+    margin: 10px auto;
+    border: 2px solid #4a148c;
 }

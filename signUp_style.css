@@ -12,8 +12,8 @@ body{
 }
 
 .box{
-    width: 80%;
-    height: 650px;
+    width: 60%;
+    height: 75%;
     padding: 40px;
     position: absolute;
     top: 50%;
@@ -24,7 +24,7 @@ body{
 }
 
 img{
-    width: 250px;
+    width: 180px;
 }
 
 .box h3{
@@ -43,13 +43,13 @@ img{
 }
 
 #input_box{
-    margin: 0 auto;
+    margin: 35px auto;
 }
 
 .box input[type="text"], .box input[type="password"]{
     background: none;
     display: inline-block;
-    margin: 20px auto;
+    margin: 10px auto;
     text-align: center;
     border: 2px solid #4a148c;
     padding: 14px 10px;
