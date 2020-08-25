@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar {
+  position: fixed;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: white;
+  border: 1px solid #ddd;
+  transition: all 0.8s ease;
+}
+
+.sidebar header {
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  line-height: 100px;
+  user-select: none;
+}
+
+header span {
+  border-bottom: 10px solid #4a148c;
+}
+
+.sidebar ul li {
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  padding-left: 50px;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px soid #333;
+  transition: 0.4s;
+}
+
+ul li:hover {
+  margin-left: 16px;
+}
+
+ul i {
+  margin-right: 8px;
+  color: #4a148c;
+}
+
+#check {
+  display: none;
+}
+
+label #btn,
+label #cancel {
+  position: absolute;
+  cursor: pointer;
+  /* background-color: #4a148c; */
+  border-radius: 24px;
+}
+
+label #btn {
+  left: 40px;
+  top: 25px;
+  font-size: 30px;
+  color: #4a148c;
+  padding: 6px 12px;
+  transition: all 0.8s;
+}
+
+label #cancel {
+  z-index: 1111;
+  left: -195px;
+  top: 30px;
+  font-size: 25px;
+  color: white;
+  padding: 5px 10px;
+  transition: all 0.8s;
+}
+
+#check:checked ~ .sidebar {
+  left: 0;
+}
+
+#check:checked ~ label #btn {
+  left: 250px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#check:checked ~ label #cancel {
+  left: 195px;
+}
+
+body {
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+section {
+  width: 80%;
+  display: flex;
+  margin: 10px auto;
+  justify-content: center;
+}
+article {
+  width: 40%;
+  margin: 10px;
+}
+
+#pro_info h3,
+#pro_info p {
+  display: inline-block;
+  padding: 8px;
+  margin: 8px;
+  font-size: 14px;
+}
+
+#pro_info h3 {
+  background-color: #ddd;
+  color: #4a148c;
+  font-weight: bold;
+  text-align: right;
+  border-bottom: 2px solid #ddd;
+}
+
+.contents {
+  width: 750px;
+  padding: 40px;
+  border: 2px solid #4a148c;
+  margin: 35px auto;
+}
+
+#pro_image {
+  width: 200px;
+  height: 200px;
+  border: 2px solid red;
+}
