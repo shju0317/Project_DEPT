@@ -130,13 +130,65 @@ article {
 
 .contents {
   width: 750px;
-  padding: 40px;
   border: 2px solid #4a148c;
-  margin: 35px auto;
+  border-radius: 24px;
+  /* margin: 100px auto; */
+}
+
+#menu_main {
+  height: 400px;
+}
+
+#menu {
+  width: 750px;
+  height: 30px;
+  border: 2px solid #4a148c;
+  border-radius: 18px 18px 0 0;
+  background: #4a148c;
+  text-align: center;
 }
 
 #pro_image {
   width: 200px;
   height: 200px;
-  border: 2px solid red;
+  border: 2px solid #4a148c;
 }
+
+#btn_modify {
+  width: 300px;
+  height: 35px;
+  margin: 20px 10px 0 10px;
+  border: 0;
+  background: #4a148c;
+  border: 2px solid #4a148c;
+  padding: 10px 0;
+  outline: none;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 24px;
+  font-size: 15px;
+}
+
+#btn_modify:hover {
+  background: none;
+  color: #4a148c;
+}
+
+.btn_menu {
+  outline: none;
+  border: none;
+  background: none;
+  color: white;
+
+  margin: auto 10px;
+  font-size: 15px;
+}
+
+/* 
+박스가운데로~~~
+position: absolute;
+top: 50%;
+left: 50%;
+
+transform: translate(-50%, -50%); 
+z-index: 100;*/
