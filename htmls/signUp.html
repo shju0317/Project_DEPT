@@ -6,6 +6,62 @@
     <title>DEPT-SignUp</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="../styles/signUp_style.css" />
+    <script>
+      $(function () {
+        $("#create_account").click(function () {
+          let username = $("#username").val();
+          let password = $("#password").val();
+          let re_password = $("#re_password").val();
+
+          if (username === "") {
+            alert("ID를 입력하세요");
+            $("#username").focus();
+
+            return false;
+          }
+
+          if (password === "") {
+            alert("비밀번호를 입력해주세요");
+            $("#password").focus();
+
+            return false;
+          }
+
+          if (re_password === "") {
+            alert("비밀번호 확인이 필요해요");
+            $("#re_password").focus();
+
+            return false;
+          }
+
+          if (password !== re_password) {
+            alert("비밀번호가 일치하지 않아요");
+            $("#password").val("");
+            $("#re_password").val("");
+            $("#password").focus();
+
+            return false;
+          }
+
+          $("form").submit();
+        });
+
+        // input box에 focus()가 있다가 다른곳으로 이동할 때 발상하는 event
+        // ID 중복 버튼을 클릭하지 않아도 ID 중복검사를 할 수 있도록
+        // username input box에 blur event를 설정
+        $("#username").blur(function () {
+          let username = $("#username").val();
+
+          id_check(username);
+        });
+
+        $("#m_username").click(function () {
+          let username = $("#username").val();
+
+          id_check(username);
+        });
+      });
+    </script>
   </head>
   <body>
     <form class="box" action="signUp.html" method="POST">
@@ -13,16 +69,35 @@
       <div id="input_box">
         <h3>signup</h3>
         <div>
-          <label>이메일(아이디)</label
-          ><input type="text" name="" placeholder="userID(email)" />
+          <label>이메일(아이디)</label>
+          <input
+            type="text"
+            name=""
+            id="username"
+            placeholder="userID(email)"
+          />
+        </div>
+        <div id="msg_username">
+          <label></label>
+          <span></span>
         </div>
         <div>
           <label>비밀번호</label
-          ><input type="password" name="" placeholder="password" />
+          ><input
+            type="password"
+            name=""
+            id="password"
+            placeholder="password"
+          />
         </div>
         <div>
           <label>비밀번호 재확인</label
-          ><input type="password" name="" placeholder="check your password" />
+          ><input
+            type="password"
+            name=""
+            id="re_password"
+            placeholder="check your password"
+          />
         </div>
         <div>
           <label>학교/학과</label

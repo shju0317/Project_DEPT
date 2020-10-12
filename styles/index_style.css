@@ -6,18 +6,28 @@
   font-style: normal;
 }
 
+* {
+  font-family: "JSDongkang-Regular";
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  font-family: JSDongkang-Regular;
   width: 100%;
   height: 100%;
 
   margin: 0;
   padding: 0;
+
+  display: flex;
+  flex-flow: column;
 }
 
 header {
   padding: 15px 10%;
   text-align: right;
+  flex: 1;
 }
 
 header button {
@@ -47,26 +57,24 @@ header button:hover {
 }
 
 #contents {
-  width: 1700px;
-  height: 550px;
   overflow: hidden;
   text-align: center;
   /* border: 1px solid red; */
   margin: 0 auto;
+  display: flex;
+  flex: 3;
 }
 
 .left_side {
-  width: 800px;
-  height: 550px;
   overflow: hidden;
   display: inline-block;
+  flex: 1;
 }
 
 .right_side {
-  width: 800px;
-  height: 550px;
   display: inline-block;
   /* border: 1px solid red; */
+  flex: 1;
 }
 
 .navigation {
@@ -74,14 +82,12 @@ header button:hover {
   margin-bottom: 10px auto;
   /* transform: translateX(70%); */
   display: flex;
-
-  border: 1px solid red;
 }
 
 .bar {
-  width: 50px;
+  width: 30px;
   height: 10px;
-  border: 1px solid #4a148c;
+  border: 1px solid#ddd;
   border-radius: 25px;
   margin: 6px auto;
   cursor: pointer;
@@ -89,10 +95,10 @@ header button:hover {
 }
 
 .bar:hover {
-  background: #4a148c;
+  background: #ddd;
 }
 
-input[name="r"] {
+input[name="radio"] {
   position: absolute;
   visibility: hidden;
 }
@@ -133,5 +139,39 @@ input[name="r"] {
   width: 780px;
   height: 530px;
   margin: 10px auto;
-  border: 1px solid #4a148c;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  padding: 10px;
+  overflow: auto;
+}
+
+#best_list li {
+  list-style-type: none;
+  display: flex;
+}
+
+.list_image i {
+  width: 50px;
+  height: 50px;
+  font-size: 70px;
+}
+
+.list_image {
+  flex: 1;
+  padding: 10px;
+}
+
+.list_box {
+  text-align: left;
+  padding: 10px;
+  flex: 3;
+}
+
+.list_title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4a148c;
+}
+
+.list_contents {
+  font-size: 20px;
 }

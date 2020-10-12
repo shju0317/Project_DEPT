@@ -65,11 +65,11 @@ section#main_content {
 #top_content_left {
   flex: 1;
   text-align: center;
-  border: 1px solid red;
 }
 
 #top_content_left img {
   margin: 0 auto;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 #top_content_right {

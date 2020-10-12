@@ -46,6 +46,10 @@ img {
   margin: 35px auto;
 }
 
+div#msg_username {
+  display: none;
+}
+
 .box input[type="text"],
 .box input[type="password"] {
   background: none;
