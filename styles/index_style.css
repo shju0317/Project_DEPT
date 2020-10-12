@@ -1,12 +1,13 @@
 @font-face {
-  font-family: "BinggraeTaom";
-  src: url("font/BinggraeTaom.otf") format("truetype");
-  font-style: normal;
+  font-family: "JSDongkang-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/JSDongkang-RegularA1.woff")
+    format("woff");
   font-weight: normal;
+  font-style: normal;
 }
 
 body {
-  font-family: BinggraeTaom;
+  font-family: JSDongkang-Regular;
   width: 100%;
   height: 100%;
 
@@ -20,12 +21,11 @@ header {
 }
 
 header button {
-  font-family: BinggraeTaom;
   height: 30px;
   width: 100px;
   background-color: #4a148c;
   color: white;
-  border: 2px solid #4a148c;
+  border: 1px solid #4a148c;
   border-radius: 25px;
   padding: auto;
   font-size: 17px;
@@ -81,7 +81,7 @@ header button:hover {
 .bar {
   width: 50px;
   height: 10px;
-  border: 1.5px solid #4a148c;
+  border: 1px solid #4a148c;
   border-radius: 25px;
   margin: 6px auto;
   cursor: pointer;
@@ -133,5 +133,5 @@ input[name="r"] {
   width: 780px;
   height: 530px;
   margin: 10px auto;
-  border: 2px solid #4a148c;
+  border: 1px solid #4a148c;
 }

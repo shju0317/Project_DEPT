@@ -55,7 +55,7 @@ img {
   border-color: #232653;
 }
 
-.box input[type="submit"] {
+.box input[type="button"] {
   border: 0;
   background: #4a148c;
   display: block;
@@ -73,7 +73,7 @@ img {
   width: 180px;
 }
 
-.box input[type="submit"]:hover {
+.box input[type="button"]:hover {
   background: none;
   color: #4a148c;
 }
