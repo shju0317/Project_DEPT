@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>DEPT-SignUp</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.2.0.min.js"
+    ></script>
     <link rel="stylesheet" type="text/css" href="../styles/signUp_style.css" />
     <script>
       $(function () {
@@ -14,51 +18,44 @@
           let re_password = $("#re_password").val();
 
           if (username === "") {
-            alert("ID를 입력하세요");
+            $("div#msg_username").css("display", "block");
+            $("div#msg_username span").css("color", "red");
+            $("div#msg_username span").text("ID를 입력해주세요");
             $("#username").focus();
 
             return false;
-          }
-
-          if (password === "") {
-            alert("비밀번호를 입력해주세요");
+          } else if (password === "") {
+            $("div#msg_username").css("display", "none");
+            $("div#msg_password").css("display", "block");
+            $("div#msg_password span").css("color", "red");
+            $("div#msg_password span").text("비밀번호를 입력해주세요");
             $("#password").focus();
 
             return false;
-          }
-
-          if (re_password === "") {
-            alert("비밀번호 확인이 필요해요");
+          } else if (re_password === "") {
+            $("div#msg_username").css("display", "none");
+            $("div#msg_password").css("display", "none");
+            $("div#msg_re_password").css("display", "block");
+            $("div#msg_re_password span").css("color", "red");
+            $("div#msg_re_password span").text("비밀번호 확인이 필요합니다");
             $("#re_password").focus();
 
             return false;
-          }
-
-          if (password !== re_password) {
-            alert("비밀번호가 일치하지 않아요");
+          } else if (password !== re_password) {
+            $("div#msg_username").css("display", "none");
+            $("div#msg_re_password").css("display", "none");
+            $("div#msg_password").css("display", "block");
+            $("div#msg_password span").text("비밀번호가 일치하지 않습니다");
             $("#password").val("");
             $("#re_password").val("");
             $("#password").focus();
 
             return false;
+          } else {
+            // $("form").submit();
+            $(location).attr("href", "login.html");
+            // location.href='login.html';
           }
-
-          $("form").submit();
-        });
-
-        // input box에 focus()가 있다가 다른곳으로 이동할 때 발상하는 event
-        // ID 중복 버튼을 클릭하지 않아도 ID 중복검사를 할 수 있도록
-        // username input box에 blur event를 설정
-        $("#username").blur(function () {
-          let username = $("#username").val();
-
-          id_check(username);
-        });
-
-        $("#m_username").click(function () {
-          let username = $("#username").val();
-
-          id_check(username);
         });
       });
     </script>
@@ -82,26 +79,29 @@
           <span></span>
         </div>
         <div>
-          <label>비밀번호</label
-          ><input
-            type="password"
-            name=""
-            id="password"
-            placeholder="password"
-          />
+          <label>비밀번호</label>
+          <input type="password" name="" id="password" placeholder="password" />
+        </div>
+        <div id="msg_password">
+          <label></label>
+          <span></span>
         </div>
         <div>
-          <label>비밀번호 재확인</label
-          ><input
+          <label>비밀번호 재확인</label>
+          <input
             type="password"
             name=""
             id="re_password"
             placeholder="check your password"
           />
         </div>
+        <div id="msg_re_password">
+          <label></label>
+          <span></span>
+        </div>
         <div>
-          <label>학교/학과</label
-          ><input
+          <label>학교/학과</label>
+          <input
             type="text"
             name=""
             id="dept_input"
@@ -111,9 +111,7 @@
           <button id="dept_search">검색</button>
         </div>
         <div>
-          <button id="create_account" onClick="location.href='login.html'">
-            Create an Account
-          </button>
+          <button id="create_account">Create an Account</button>
         </div>
       </div>
     </form>

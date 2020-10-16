@@ -149,6 +149,47 @@ nav#menu {
   color: black;
 }
 
-td {
+#top_content_right td {
   border: 1px solid;
+}
+
+#bottom_content_in {
+  margin: 0 auto;
+}
+
+#write_table {
+  width: 70%;
+  padding: 3px;
+
+  justify-content: center;
+  text-align: center;
+  margin: 15px auto;
+
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+}
+
+#write_table th,
+#write_table td {
+  text-align: left;
+  padding: 5px;
+}
+
+#write_table th {
+  border-bottom: 1px solid #ddd;
+}
+
+.paging {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.paging a {
+  display: inline-block;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+.paging i {
+  color: #888;
 }
